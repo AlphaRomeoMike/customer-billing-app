@@ -1,0 +1,40 @@
+<div class="container my-5">
+  <div class="col-12 col-md-6 offset-md-3">
+    <ngb-alert #registered *ngIf="success" type="success">
+      <div class="text-success">
+        <strong>Success!</strong> You have been registered.
+      </div>
+    </ngb-alert>
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5>
+              <fa-icon [icon]="login"></fa-icon>
+              Please Login to continue
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="form-group mb-2">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" formControlName="email" />
+            </div>
+            <div class="form-group mb-2">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" formControlName="password" />
+            </div>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-dark" (onclick)="onSubmit()" [disabled]="!loginForm.valid">
+              <fa-icon [icon]="login"></fa-icon>
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

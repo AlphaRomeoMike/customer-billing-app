@@ -1,0 +1,114 @@
+<div class="row">
+  <div class="col-3">
+    <div class="card mt-5">
+      <div class="card-header">
+        <h3>
+          Server health
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>{{ health }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card # 2 -->
+  <div class="col-3">
+    <div class="card mt-5">
+      <div class="card-header">
+        <h3>
+          Users
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>The total number of users is: <b>{{ stats?.users }}</b> 👥</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card # 3 -->
+  <div class="col-3">
+    <div class="card mt-5">
+      <div class="card-header">
+        <a (click)="navigateToBills()" class="text-decoration-none">
+          <h3>
+            Bills
+          </h3>
+        </a>
+      </div>
+      <div class="card-body">
+        <p>The total number of bills is: <b>{{ stats?.bills }}</b> 💸</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card # 4 -->
+  <div class="col-3">
+    <div class="card mt-5">
+      <div class="card-header">
+        <h3>
+          Users
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>The total number of users is: <b>{{ stats?.users }}</b> 👥</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card # 5 -->
+  <div class="col-3">
+    <div class="card mb-5 mt-3">
+      <div class="card-header">
+        <h3>
+          Total Amount
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>The total amount of bills is: <b>${{ stats?.amount }}</b> 🦠</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card # 6 -->
+  <div class="col-3">
+    <div class="card mb-5 mt-3">
+      <div class="card-header">
+        <h3>
+          Categories
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>The total number of categories is: <b>{{ stats?.categories }}</b> 🐛</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card # 7 -->
+  <div class="col-3">
+    <div class="card mb-5 mt-3">
+      <div class="card-header">
+        <h3>
+          Subcategories
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>The total number of subcategories is: <b>{{ stats?.subcategories }}</b> 👥</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card # 6 -->
+  <div class="col-3">
+    <div class="card mb-5 mt-3">
+      <div class="card-header">
+        <h3>
+          Paid Bills
+        </h3>
+      </div>
+      <div class="card-body">
+        <p>The total number of paid bills is: <b>{{ stats?.paid }}</b> 👥</p>
+      </div>
+    </div>
+  </div>
+</div>

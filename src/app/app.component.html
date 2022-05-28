@@ -1,0 +1,53 @@
+<!-- navigation -->
+<div>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <fa-icon [icon]="money" size="lg" width="30" height="24"></fa-icon>
+        Customer Billing Application
+      </a>
+      <div class="text-dark navbar-nav">
+        <div *ngIf="!data" class="d-flex">
+          <ul class="nav-item">
+            <a [routerLink]="'register'" class="nav-link">Register</a>
+          </ul>
+          <ul class="nav-item">
+            <a [routerLink]="'login'" class="nav-link">Login</a>
+          </ul>
+        </div>
+        <div *ngIf="data" class="d-flex">
+          <ul class="nav-item">
+            <a class="nav-link">Home</a>
+          </ul>
+          <ul class="nav-item">
+            <a class="nav-link">Bills</a>
+          </ul>
+          <ul class="nav-item">
+            <a class="nav-link">Customers</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="d-flex flex-column full-page">
+  <div class="container-fluid">
+    <!-- main content -->
+    <div id="page-content">
+      <div class="container">
+        <div class="row">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<div>
+  <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Customer Billing and Information System</small>
+    </div>
+  </footer>
+</div>

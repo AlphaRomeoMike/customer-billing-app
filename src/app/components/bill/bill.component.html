@@ -1,0 +1,45 @@
+<div class="row justify-content-center my-5">
+  <div class="col-12 col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <span>
+            <h5>
+              Bill Management
+            </h5>
+          </span>
+
+          <button (click)="navigateToAddBills()" *ngIf="role == 'ADMIN'" class="btn btn-sm btn-dark">Add Bill</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <table class="table table-hover table-striped">
+          <tr>
+            <th>User</th>
+            <th>Category</th>
+            <th>Subcategry</th>
+            <th>Amount</th>
+            <th>Due Date</th>
+            <th>Paid</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+          
+          <tr *ngFor="let bill of bills">
+            <td>{{bill.user.name}}</td>
+            <td>{{bill.category.name}}</td>
+            <td>{{bill.subcategory.name}}</td>
+            <td>{{bill.amount}}</td>
+            <td>{{bill.due_date}}</td>
+            <td>{{bill.paid ? 'Paid' : 'Unpaid'}}</td>
+            <td>{{bill.status ? 'Active' : 'Inactive'}}</td>  
+            <td>
+              <button *ngIf="role == 'ADMIN'" class="btn btn-sm btn-dark text-danger" (click)="navigateToBill(bill)">Edit</button>
+              <button *ngIf="role == 'ADMIN'" class="btn btn-sm btn-dark text-danger">Delete</button>
+              <button *ngIf="role == 'USER'" class="btn btn-sm btn-dark text-danger" (click)="navigateToBill(bill)">Pay</button>
+            </td>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

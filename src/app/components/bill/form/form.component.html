@@ -1,0 +1,33 @@
+<div class="row justify-content-center my-5">
+  <div class="col-12 col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <span>
+            <h5>
+              Bill Management
+            </h5>
+          </span>
+        </div>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="form">
+          <div class="form-group mb-2">
+            <label for="name">Username</label>
+            <input type="text" [disabled]="true" name="name" id="name" class="form-control" formControlName="name">
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="category_id">Category</label>w
+            <input type="text" [disabled]="true" name="category_id" id="category_id" class="form-control" formControlName="category_id">
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="subcategory_id">Subcategory</label>
+            <input type="text" [disabled]="true" name="subcategory_id" id="subcategory_id" class="form-control" formControlName="subcategory_id">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
